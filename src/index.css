@@ -1,0 +1,353 @@
+/* ==========================================================================
+   DAGDI ELECTRICALS & POWER CONTROLS — CORE DESIGN SYSTEM TOKENS
+   Proprietor: Sandesh Dagdi Saini | Beawar, Rajasthan | GSTIN: 08ADOPD4068J1Z9
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Industrial Authority & High-Tech Commerce */
+  --color-primary-950: #070e20;
+  --color-primary-900: #0b1b3d; /* Deep Navy */
+  --color-primary-800: #102a54;
+  --color-primary-700: #183e78;
+  --color-primary-100: #e8f0fe;
+  --color-primary-50:  #f0f5ff;
+
+  --color-accent-blue: #0066ff; /* Electric Power Blue */
+  --color-accent-blue-hover: #0052cc;
+  --color-accent-blue-light: #e6f0ff;
+
+  --color-accent-amber: #f59e0b; /* Safety / Industrial Amber Gold */
+  --color-accent-amber-hover: #d97706;
+  --color-accent-amber-light: #fef3c7;
+
+  --color-surface-bg: #f8fafc; /* Crisp Slate page background */
+  --color-surface-white: #ffffff;
+  --color-surface-card: #ffffff;
+  --color-surface-subtle: #f1f5f9;
+  --color-surface-border: #e2e8f0;
+  --color-surface-border-strong: #cbd5e1;
+
+  --color-text-main: #0f172a; /* Slate 900 */
+  --color-text-muted: #475569; /* Slate 600 */
+  --color-text-subtle: #64748b; /* Slate 500 */
+  --color-text-inverse: #ffffff;
+
+  --color-status-success: #10b981;
+  --color-status-success-light: #ecfdf5;
+  --color-status-warning: #f59e0b;
+  --color-status-error: #ef4444;
+  --color-status-error-light: #fef2f2;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Shadows & Elevation */
+  --shadow-xs: 0 1px 2px 0 rgba(11, 27, 61, 0.05);
+  --shadow-sm: 0 2px 4px -1px rgba(11, 27, 61, 0.06), 0 1px 2px -1px rgba(11, 27, 61, 0.04);
+  --shadow-md: 0 6px 16px -2px rgba(11, 27, 61, 0.08), 0 2px 6px -2px rgba(11, 27, 61, 0.04);
+  --shadow-lg: 0 12px 28px -4px rgba(11, 27, 61, 0.12), 0 4px 12px -2px rgba(11, 27, 61, 0.06);
+  --shadow-xl: 0 24px 48px -12px rgba(11, 27, 61, 0.18);
+  --shadow-glow: 0 0 20px rgba(0, 102, 255, 0.25);
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Layout */
+  --max-width: 1400px;
+  --header-height: 80px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ==========================================================================
+   CSS Reset & Base Rules
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text-main);
+  background-color: var(--color-surface-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 14px;
+}
+
+/* Focus Visible Accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-accent-blue);
+  outline-offset: 2px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface-subtle);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ==========================================================================
+   Layout Containers & Utilities
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.flex { display: flex; }
+.flex-col { display: flex; flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.gap-2 { gap: 8px; }
+.gap-3 { gap: 12px; }
+.gap-4 { gap: 16px; }
+.gap-6 { gap: 24px; }
+.gap-8 { gap: 32px; }
+
+/* Grid Utilities */
+.grid { display: grid; }
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+@media (max-width: 1024px) {
+  .lg-grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lg-grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .sm-grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.btn-primary {
+  background-color: var(--color-accent-blue);
+  color: var(--color-surface-white);
+  box-shadow: 0 2px 8px rgba(0, 102, 255, 0.28);
+}
+.btn-primary:hover {
+  background-color: var(--color-accent-blue-hover);
+  box-shadow: 0 4px 14px rgba(0, 102, 255, 0.38);
+  transform: translateY(-1px);
+}
+
+.btn-navy {
+  background-color: var(--color-primary-900);
+  color: var(--color-surface-white);
+}
+.btn-navy:hover {
+  background-color: var(--color-primary-800);
+  transform: translateY(-1px);
+}
+
+.btn-amber {
+  background-color: var(--color-accent-amber);
+  color: var(--color-primary-950);
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+.btn-amber:hover {
+  background-color: var(--color-accent-amber-hover);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  border: 1px solid var(--color-surface-border-strong);
+  background: var(--color-surface-white);
+  color: var(--color-text-main);
+}
+.btn-outline:hover {
+  border-color: var(--color-accent-blue);
+  color: var(--color-accent-blue);
+  background-color: var(--color-accent-blue-light);
+}
+
+.btn-ghost {
+  color: var(--color-text-muted);
+}
+.btn-ghost:hover {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text-main);
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: var(--radius-sm);
+}
+
+.btn-lg {
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: var(--radius-lg);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: var(--radius-full);
+}
+
+.badge-blue {
+  background-color: var(--color-primary-50);
+  color: var(--color-accent-blue);
+  border: 1px solid rgba(0, 102, 255, 0.2);
+}
+
+.badge-amber {
+  background-color: var(--color-accent-amber-light);
+  color: #b45309;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-green {
+  background-color: var(--color-status-success-light);
+  color: #047857;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.badge-navy {
+  background-color: var(--color-primary-900);
+  color: #ffffff;
+}
+
+/* Section Header Typography */
+.section-title-wrap {
+  margin-bottom: 28px;
+}
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-accent-blue);
+  margin-bottom: 8px;
+}
+.section-heading {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-primary-900);
+  letter-spacing: -0.5px;
+}
+.section-subheading {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  max-width: 640px;
+  margin-top: 6px;
+}
+
+@media (min-width: 768px) {
+  .section-heading {
+    font-size: 34px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Tabular figures for prices */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}

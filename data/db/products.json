@@ -1,0 +1,902 @@
+[
+  {
+    "id": "prod-apfc-150",
+    "name": "Automatic Power Factor Control (APFC) Panel - 150 kVAR",
+    "sku": "DAG-APFC-150K",
+    "slug": "automatic-power-factor-control-apfc-panel-150-kvar",
+    "brand": "DAGDI Controls & Works",
+    "category": "panels-switchgear",
+    "subcategory": "APFC Panels",
+    "price": 250000,
+    "mrp": 285000,
+    "unit": "Piece",
+    "inStock": true,
+    "stockCount": 4,
+    "hsnCode": "85372000",
+    "gstRate": 18,
+    "rating": 4.9,
+    "reviewCount": 19,
+    "featured": true,
+    "badge": "HEAVY DUTY",
+    "images": [
+      "/images/apfc_panel.jpg",
+      "https://5.imimg.com/data5/IOS/Default/2025/8/535501990/AL/OQ/MJ/6547234/product-jpeg-500x500.jpeg"
+    ],
+    "shortDesc": "Automated 150 kVAR power factor correction panel with 12-stage Entes/Multispan digital controller, heavy duty Momaya capacitors, and copper busbars.",
+    "fullDesc": "Custom engineered at Dagdi Electric Motor Rewinding Works, Beawar. Designed specifically for industrial manufacturing plants, stone crushers, mining setups, and spinning mills to maintain power factor close to unity (0.99) and eliminate electricity board penalty surcharges. Built with IP54 rated powder-coated mild steel sheet, Siemens/L&T contactors, and copper busbars.",
+    "specs": {
+      "Rated Capacity": "150 kVAR (Steps: 10, 15, 25, 25, 25, 50)",
+      "Rated Voltage": "415V AC ± 10%, 3-Phase, 50 Hz",
+      "Controller Relay": "Entes RG3-12CS 12-Step Microprocessor",
+      "Capacitors Used": "Momaya / Malde Heavy Duty MPP Box Capacitors",
+      "Enclosure Standard": "CRCA 2mm Sheet Steel, IP54 Powder Coated",
+      "Busbar Material": "Electrolytic Grade ETP Copper with Heat-Shrink Sleeves",
+      "Cooling": "Thermostatically Controlled Forced Exhaust Fans",
+      "Warranty": "18 Months Replacement Warranty on Controller & Capacitors"
+    },
+    "applications": [
+      "Stone Crushers & Granite Quarries",
+      "Cement Mills",
+      "Textile & Spinning Units",
+      "Commercial High Rises"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 250000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 238000
+      },
+      {
+        "minQty": 4,
+        "pricePerUnit": 225000
+      }
+    ],
+    "datasheetAvailable": true
+  },
+  {
+    "id": "prod-apfc-60",
+    "name": "Automatic Power Factor Control (APFC) Panel - 60 kVAR Compact",
+    "sku": "DAG-APFC-060K",
+    "slug": "automatic-power-factor-control-apfc-panel-60-kvar-compact",
+    "brand": "DAGDI Controls & Works",
+    "category": "panels-switchgear",
+    "subcategory": "APFC Panels",
+    "price": 115000,
+    "mrp": 135000,
+    "unit": "Piece",
+    "inStock": true,
+    "stockCount": 6,
+    "hsnCode": "85372000",
+    "gstRate": 18,
+    "rating": 4.8,
+    "reviewCount": 14,
+    "featured": true,
+    "badge": "BESTSELLER",
+    "images": [
+      "/images/apfc_panel.jpg"
+    ],
+    "shortDesc": "Compact 60 kVAR 6-stage APFC panel board with digital display for small factories, workshops, and commercial pump stations.",
+    "fullDesc": "Ideal for workshops, plastic injection molding units, cold storages, and commercial motor loads up to 100 HP. Maintains target power factor automatically under varying loads, preventing utility power factor penalties.",
+    "specs": {
+      "Rated Capacity": "60 kVAR (Steps: 5, 10, 15, 15, 15 kVAR)",
+      "Rated Voltage": "415V AC, 3-Phase 4-Wire, 50 Hz",
+      "Controller": "Multispan / Entes 6-8 Step Digital Relay",
+      "Capacitor Spec": "Heavy Duty Self-Healing Polypropylene Film",
+      "Protection": "HRC Back-up Fuses and Thermal Overload Relays",
+      "Warranty": "12 Months Comprehensive On-Site Warranty"
+    },
+    "applications": [
+      "Workshops & Fabrication Yards",
+      "Flour Mills",
+      "Borewell Pumping Stations"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 115000
+      },
+      {
+        "minQty": 3,
+        "pricePerUnit": 108000
+      }
+    ],
+    "datasheetAvailable": true
+  },
+  {
+    "id": "prod-ab-switch-11kv",
+    "name": "11kV Gang Operated Air Break (AB) Switch Triple Pole",
+    "sku": "DAG-AB-11KV-TP",
+    "slug": "11kv-gang-operated-air-break-ab-switch-triple-pole",
+    "brand": "DAGDI Controls & Works",
+    "category": "panels-switchgear",
+    "subcategory": "11kV Air Break Switches",
+    "price": 18500,
+    "mrp": 22000,
+    "unit": "Set",
+    "inStock": true,
+    "stockCount": 12,
+    "hsnCode": "85353090",
+    "gstRate": 18,
+    "rating": 4.9,
+    "reviewCount": 23,
+    "featured": false,
+    "badge": "SAFETY CERTIFIED",
+    "images": [
+      "/images/dagdi_hero_banner.jpg"
+    ],
+    "shortDesc": "Outdoor high-tension 11kV gang-operated air break disconnect switch with post insulators and electrolytic copper jaw contacts.",
+    "fullDesc": "Heavy-duty 11kV Triple-Pole Air Break Switch designed for overhead distribution lines, substations, and industrial captive transformer isolation. Features hot-dip galvanized steel channel base, porcelain post insulators, and phosphor-bronze spring loaded copper contacts for zero arcing and positive lock latching.",
+    "specs": {
+      "Rated Voltage": "11 kV (Max System Voltage 12 kV)",
+      "Current Rating": "200A / 400A Continuous",
+      "Short Time Current": "16 kA for 1 Second",
+      "No. of Poles": "3 (Triple Pole Gang Operated)",
+      "Insulators": "6 Nos. Solid Core Porcelain Pin / Post Insulators",
+      "Contact Material": "Hard Drawn High Conductivity ETP Copper",
+      "Standard Compliance": "IS 9921 / IEC 60129"
+    },
+    "applications": [
+      "Substation Feeders",
+      "Industrial Plant Transformer Yards",
+      "Solar Power Plants"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 18500
+      },
+      {
+        "minQty": 5,
+        "pricePerUnit": 17200
+      }
+    ],
+    "datasheetAvailable": true
+  },
+  {
+    "id": "prod-ador-e7018-315",
+    "name": "Ador Welding Electrode E7018 Super-6 (3.15mm x 450mm)",
+    "sku": "ADOR-E7018-315",
+    "slug": "ador-welding-electrode-e7018-super-6-3-15mm",
+    "brand": "Ador Welding Ltd",
+    "category": "welding-solutions",
+    "subcategory": "E7018 Low Hydrogen",
+    "price": 2500,
+    "mrp": 2850,
+    "unit": "Box (20 Kg)",
+    "inStock": true,
+    "stockCount": 85,
+    "hsnCode": "83111000",
+    "gstRate": 18,
+    "rating": 4.9,
+    "reviewCount": 42,
+    "featured": true,
+    "badge": "BESTSELLER",
+    "images": [
+      "/images/welding_electrodes.jpg",
+      "https://5.imimg.com/data5/SELLER/Default/2025/8/534270733/KD/JG/WL/6547234/ador-welding-electrode-e7018-500x500.jpg"
+    ],
+    "shortDesc": "Basic coated low hydrogen iron powder electrode for heavy structural and radiographic quality welding.",
+    "fullDesc": "Ador Super-6 E7018 is an industry gold standard heavy-coated low-hydrogen electrode designed for welding high-strength carbon steels, pressure vessels, boilers, earthmoving machinery, and structural frames. Offers ultra-smooth arc, minimal spatter, easy slag detachability, and excellent sub-zero impact toughness.",
+    "specs": {
+      "AWS Classification": "AWS A5.1 / ASME SFA 5.1 E7018",
+      "IS Specification": "IS 814: EB 5426 H3JX",
+      "Diameter x Length": "3.15 mm x 450 mm",
+      "Current Range": "90 - 140 Amperes (AC / DC+)",
+      "Tensile Strength": "520 - 640 N/mm²",
+      "Yield Strength": "420 N/mm² Minimum",
+      "Diffusible Hydrogen": "< 5 ml / 100g of weld metal",
+      "Packaging": "4 Packets of 5kg each = 20kg Master Box"
+    },
+    "applications": [
+      "Boiler & Pressure Vessel Fabrication",
+      "Crane Girders & Bridges",
+      "Heavy Mining Equipment Repair"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 2500
+      },
+      {
+        "minQty": 5,
+        "pricePerUnit": 2420
+      },
+      {
+        "minQty": 20,
+        "pricePerUnit": 2300
+      }
+    ],
+    "datasheetAvailable": true
+  },
+  {
+    "id": "prod-dh-7018-40",
+    "name": "D&H Welding Electrodes 7018 4.0mm Low Hydrogen",
+    "sku": "DH-7018-400",
+    "slug": "dh-welding-electrodes-7018-4-0mm-low-hydrogen",
+    "brand": "D&H Secheron",
+    "category": "welding-solutions",
+    "subcategory": "E7018 Low Hydrogen",
+    "price": 2200,
+    "mrp": 2600,
+    "unit": "Box (20 Kg)",
+    "inStock": true,
+    "stockCount": 65,
+    "hsnCode": "83111000",
+    "gstRate": 18,
+    "rating": 4.8,
+    "reviewCount": 31,
+    "featured": true,
+    "badge": "POPULAR",
+    "images": [
+      "/images/welding_electrodes.jpg",
+      "https://5.imimg.com/data5/IOS/Default/2025/7/526724397/HQ/QP/UW/6547234/product-jpeg-500x500.jpeg"
+    ],
+    "shortDesc": "Heavy-gauge 4.0mm low-hydrogen electrode for deep penetration structural steel welding and heavy joints.",
+    "fullDesc": "Manufactured by D&H Secheron, this 4.0mm E7018 electrode provides high metal recovery (approx 115%) and crack-resistant weld deposits under heavy dynamic stresses. Suitable for heavy industrial fabricators in Beawar, Kishangarh, and Ajmer.",
+    "specs": {
+      "AWS Classification": "AWS A5.1 E7018",
+      "Diameter": "4.0 mm",
+      "Current Range": "140 - 190 Amps",
+      "Yield Strength": "> 400 MPa",
+      "Elongation": "26 - 30%",
+      "Packing": "20 Kg Master Box"
+    },
+    "applications": [
+      "Shipbuilding & Heavy Columns",
+      "Truck Body Fabrication",
+      "Crusher Jaw Hardfacing Base"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 2200
+      },
+      {
+        "minQty": 5,
+        "pricePerUnit": 2120
+      },
+      {
+        "minQty": 25,
+        "pricePerUnit": 2040
+      }
+    ],
+    "datasheetAvailable": true
+  },
+  {
+    "id": "prod-dh-6013-315",
+    "name": "D&H 6013 General Purpose Welding Rods (3.15mm)",
+    "sku": "DH-6013-315",
+    "slug": "dh-6013-general-purpose-welding-rods-3-15mm",
+    "brand": "D&H Secheron",
+    "category": "welding-solutions",
+    "subcategory": "6013 General Purpose",
+    "price": 2100,
+    "mrp": 2450,
+    "unit": "Box (20 Kg)",
+    "inStock": true,
+    "stockCount": 110,
+    "hsnCode": "83111000",
+    "gstRate": 18,
+    "rating": 4.7,
+    "reviewCount": 58,
+    "featured": false,
+    "badge": "VALUE PACK",
+    "images": [
+      "/images/welding_electrodes.jpg",
+      "https://5.imimg.com/data5/IOS/Default/2025/7/526751518/CB/FN/GL/6547234/product-jpeg-500x500.jpeg"
+    ],
+    "shortDesc": "Rutile medium coated all-position welding rod for mild steel fabrication, sheet metal, and general gates/grills.",
+    "fullDesc": "The most versatile and welder-friendly electrode for all mild steel works. Smooth arc with easy restriking, low spatter, and self-peeling slag.",
+    "specs": {
+      "AWS Classification": "AWS A5.1 E6013",
+      "Diameter": "3.15 mm",
+      "Length": "350 mm / 450 mm",
+      "Current": "90 - 130 Amps (AC / DC- / DC+)",
+      "Weld Position": "All Positions (F, H, V-up, OH)"
+    },
+    "applications": [
+      "General Fabrication & Gates",
+      "Tractor Trolley Works",
+      "Shed Frameworks"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 2100
+      },
+      {
+        "minQty": 10,
+        "pricePerUnit": 1980
+      }
+    ],
+    "datasheetAvailable": true
+  },
+  {
+    "id": "prod-co2-mig-wire",
+    "name": "CO2 MIG Continuous Welding Wire 1.2mm (15 Kg Spool)",
+    "sku": "DAG-MIG-12MM",
+    "slug": "co2-mig-continuous-welding-wire-1-2mm-15kg-spool",
+    "brand": "Ador Welding Ltd",
+    "category": "welding-solutions",
+    "subcategory": "CO2 MIG Wires",
+    "price": 2450,
+    "mrp": 2800,
+    "unit": "Spool (15 Kg)",
+    "inStock": true,
+    "stockCount": 45,
+    "hsnCode": "72292000",
+    "gstRate": 18,
+    "rating": 4.8,
+    "reviewCount": 27,
+    "featured": false,
+    "badge": "COPPER COATED",
+    "images": [
+      "/images/welding_electrodes.jpg"
+    ],
+    "shortDesc": "Copper coated solid carbon steel wire for semi-automatic and robotic GMAW / MIG welding.",
+    "fullDesc": "High-purity uniform copper coating ensures smooth wire feeding without tip clogging, minimum spatter, and superior electrical conductivity in MIG/MAG welding setups.",
+    "specs": {
+      "Classification": "AWS A5.18 ER70S-6",
+      "Wire Diameter": "1.20 mm",
+      "Shielding Gas": "100% CO2 or Ar+CO2 mixture",
+      "Spool Type": "D300 Precision Layer Wound 15kg Plastic Spool"
+    },
+    "applications": [
+      "Automobile Chassis Fabrication",
+      "Pressure Vessels & Tanks",
+      "Continuous Production Lines"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 2450
+      },
+      {
+        "minQty": 5,
+        "pricePerUnit": 2350
+      },
+      {
+        "minQty": 20,
+        "pricePerUnit": 2200
+      }
+    ],
+    "datasheetAvailable": true
+  },
+  {
+    "id": "prod-milan-copper-wire-21",
+    "name": "Milan Super Enameled Copper Winding Wire SWG 21",
+    "sku": "MIL-CU-SWG21",
+    "slug": "milan-super-enameled-copper-winding-wire-swg-21",
+    "brand": "Milan Winding Wires",
+    "category": "wires-cables",
+    "subcategory": "Enameled Copper Winding Wires",
+    "price": 980,
+    "mrp": 1150,
+    "unit": "Kg (Spool)",
+    "inStock": true,
+    "stockCount": 350,
+    "hsnCode": "85441110",
+    "gstRate": 18,
+    "rating": 5,
+    "reviewCount": 49,
+    "featured": true,
+    "badge": "99.99% PURE COPPER",
+    "images": [
+      "/images/copper_wire.jpg"
+    ],
+    "shortDesc": "Dual-coat modified polyester + polyamide-imide enameled copper wire, Class H 200°C for motor rewinding.",
+    "fullDesc": "Directly sourced electrolytic tough pitch (ETP) grade copper winding wire with conductivity exceeding 101% IACS. Designed to resist high thermal spikes and mechanical stresses during coil winding in heavy 3-phase motors and transformers.",
+    "specs": {
+      "Wire Gauge": "SWG 21 (Diameter: 0.813 mm)",
+      "Thermal Class": "Class H (200°C)",
+      "Insulation Type": "Dual Coat: Polyester base + Polyamide-imide topcoat",
+      "Copper Purity": "99.99% ETP Grade Electrolytic Copper",
+      "Dielectric Breakdown": "> 5.5 kV at room temperature",
+      "Standard": "IS 13730 / IEC 60317-13"
+    },
+    "applications": [
+      "Electric Motor Rewinding",
+      "Transformers & Chokes",
+      "Submersible Pump Stators"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 10,
+        "pricePerUnit": 980
+      },
+      {
+        "minQty": 50,
+        "pricePerUnit": 940
+      },
+      {
+        "minQty": 100,
+        "pricePerUnit": 910
+      }
+    ],
+    "datasheetAvailable": true
+  },
+  {
+    "id": "prod-submersible-poly-wire",
+    "name": "Submersible Pump Copper Winding Wire (Poly Wrapped 1.2mm)",
+    "sku": "DAG-SUB-POLY12",
+    "slug": "submersible-pump-copper-winding-wire-poly-wrapped-1-2mm",
+    "brand": "Milan Winding Wires",
+    "category": "wires-cables",
+    "subcategory": "Submersible Winding Wires",
+    "price": 1050,
+    "mrp": 1200,
+    "unit": "Kg",
+    "inStock": true,
+    "stockCount": 210,
+    "hsnCode": "85441110",
+    "gstRate": 18,
+    "rating": 4.9,
+    "reviewCount": 37,
+    "featured": false,
+    "badge": "WATERPROOF INSULATION",
+    "images": [
+      "/images/copper_wire.jpg"
+    ],
+    "shortDesc": "Multi-layer biaxially oriented polypropylene (BOPP) wrapped copper wire for water-filled submersible borehole motors.",
+    "fullDesc": "Engineered specifically for agricultural and industrial submersible motors operating immersed in water. Multi-layer cross-lapped BOPP tape gives 100% water impermeability and high breakdown voltage.",
+    "specs": {
+      "Conductor": "High Conductivity Annealed Bare Copper",
+      "Conductor Size": "1.20 mm",
+      "Insulation": "Heat Resistant Polypropylene (BOPP Tape)",
+      "Working Temperature": "Up to 105°C continuous in water",
+      "Standard": "IS 8783 Part 4"
+    },
+    "applications": [
+      "Deep-well Borehole Submersible Motors",
+      "Openwell Submersible Pumps"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 10,
+        "pricePerUnit": 1050
+      },
+      {
+        "minQty": 50,
+        "pricePerUnit": 1010
+      }
+    ],
+    "datasheetAvailable": true
+  },
+  {
+    "id": "prod-kei-3core-submersible-cable",
+    "name": "KEI 3-Core Flat Submersible Copper Cable (4.0 sq mm)",
+    "sku": "KEI-3C-SUB-4MM",
+    "slug": "kei-3-core-flat-submersible-copper-cable-4-0-sq-mm",
+    "brand": "KEI Industries",
+    "category": "wires-cables",
+    "subcategory": "3-Core Flat Cables",
+    "price": 185,
+    "mrp": 230,
+    "unit": "Meter",
+    "inStock": true,
+    "stockCount": 1500,
+    "hsnCode": "85444990",
+    "gstRate": 18,
+    "rating": 4.8,
+    "reviewCount": 64,
+    "featured": true,
+    "badge": "ISI CERTIFIED",
+    "images": [
+      "/images/copper_wire.jpg"
+    ],
+    "shortDesc": "Heavy-duty water-resistant PVC insulated 3-core flat power cable for 5 HP to 10 HP deep submersible pumps.",
+    "fullDesc": "Manufactured with bright annealed electrolytic copper conductors and specially formulated waterproof PVC sheath to withstand high hydrostatic pressure inside borewells up to 800 feet depth.",
+    "specs": {
+      "Cross Section": "4.0 sq mm (3-Core Flat)",
+      "Current Carrying Capacity": "29 Amps",
+      "Conductor Type": "Multi-strand Class 5 Flexible Copper",
+      "Outer Sheath": "Tough, abrasion-resistant Water-proof PVC (Black)",
+      "Voltage Rating": "1100V Grade",
+      "Standard": "IS 694"
+    },
+    "applications": [
+      "Agricultural Borewell Pump Installations",
+      "Mining Dewatering Pumps"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 50,
+        "pricePerUnit": 185
+      },
+      {
+        "minQty": 100,
+        "pricePerUnit": 172
+      },
+      {
+        "minQty": 300,
+        "pricePerUnit": 162
+      }
+    ],
+    "datasheetAvailable": true
+  },
+  {
+    "id": "prod-kei-house-wire-25",
+    "name": "KEI FRLS-H Flame Retardant House Wire 2.5 sq mm (90m Coil)",
+    "sku": "KEI-FRLS-25MM",
+    "slug": "kei-frls-h-flame-retardant-house-wire-2-5-sq-mm-90m-coil",
+    "brand": "KEI Industries",
+    "category": "wires-cables",
+    "subcategory": "FRLS House Wires",
+    "price": 2450,
+    "mrp": 2950,
+    "unit": "Coil (90m)",
+    "inStock": true,
+    "stockCount": 80,
+    "hsnCode": "85444990",
+    "gstRate": 18,
+    "rating": 4.9,
+    "reviewCount": 46,
+    "featured": false,
+    "badge": "FIRE SAFE",
+    "images": [
+      "/images/copper_wire.jpg"
+    ],
+    "shortDesc": "100% pure copper flame retardant low smoke and halogen home wiring cable for power points and air conditioners.",
+    "fullDesc": "High oxygen index (>29%) and low toxic gas emission ensure life safety in case of domestic or industrial electrical fire. 100% electrolytic annealed copper.",
+    "specs": {
+      "Size": "2.5 sq mm",
+      "Length": "90 Meters (Certified)",
+      "Current Rating": "22 Amps",
+      "Insulation": "FRLS-H Grade Lead-Free PVC",
+      "Color Options": "Red, Yellow, Blue, Black, Green"
+    },
+    "applications": [
+      "Residential AC & Power Sockets",
+      "Commercial Showrooms & Offices"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 2450
+      },
+      {
+        "minQty": 5,
+        "pricePerUnit": 2320
+      }
+    ],
+    "datasheetAvailable": true
+  },
+  {
+    "id": "prod-motor-15hp-3phase",
+    "name": "15 HP 3-Phase Heavy Duty AC Induction Motor (1440 RPM)",
+    "sku": "DAG-MOT-15HP-4P",
+    "slug": "15-hp-3-phase-heavy-duty-ac-induction-motor-1440-rpm",
+    "brand": "DAGDI Controls & Works",
+    "category": "motors-rewinding",
+    "subcategory": "3-Phase Induction Motors",
+    "price": 38500,
+    "mrp": 44000,
+    "unit": "Piece",
+    "inStock": true,
+    "stockCount": 8,
+    "hsnCode": "85015210",
+    "gstRate": 18,
+    "rating": 5,
+    "reviewCount": 18,
+    "featured": true,
+    "badge": "IE3 EFFICIENCY",
+    "images": [
+      "/images/electric_motor.jpg"
+    ],
+    "shortDesc": "Robust cast iron 11 kW / 15 HP 4-pole squirrel cage induction motor with Class F insulation and dynamic balanced rotor.",
+    "fullDesc": "Constructed for demanding industrial environments in Rajasthan like stone crushers, marble polishing units, flour mills, and blowers. Features heavy ribbed cast iron frame for thermal dissipation, SKF/NBC heavy duty bearings, and vacuum pressure varnished stator coils.",
+    "specs": {
+      "Power Rating": "15 HP / 11 kW",
+      "Rated Speed": "1440 RPM (4-Pole)",
+      "Rated Voltage": "415V AC ± 10%, 3-Phase, 50 Hz",
+      "Full Load Current": "21.5 Amperes",
+      "Frame Size": "160M Foot Mounted (B3)",
+      "Insulation Class": "Class F (Temperature rise Class B)",
+      "Protection": "IP55 Totally Enclosed Fan Cooled (TEFC)",
+      "Bearings": "Grease Lubricated Deep Groove Ball Bearings (6309 2Z)"
+    },
+    "applications": [
+      "Stone & Marble Processing Machinery",
+      "Flour & Oil Expellers",
+      "Centrifugal Industrial Pumps"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 38500
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 36800
+      }
+    ],
+    "datasheetAvailable": true
+  },
+  {
+    "id": "prod-motor-75hp-submersible",
+    "name": "7.5 HP V6 Stainless Steel Submersible Borewell Pump Motor",
+    "sku": "DAG-SUB-75HP",
+    "slug": "7-5-hp-v6-stainless-steel-submersible-borewell-pump-motor",
+    "brand": "DAGDI Controls & Works",
+    "category": "motors-rewinding",
+    "subcategory": "Submersible Pumps",
+    "price": 24800,
+    "mrp": 29000,
+    "unit": "Piece",
+    "inStock": true,
+    "stockCount": 11,
+    "hsnCode": "84137010",
+    "gstRate": 18,
+    "rating": 4.8,
+    "reviewCount": 22,
+    "featured": false,
+    "badge": "WATER COOLED",
+    "images": [
+      "/images/electric_motor.jpg"
+    ],
+    "shortDesc": "High-thrust 6-inch water filled submersible motor with copper rotor and carbon-ceramic thrust bearing for deep wells.",
+    "fullDesc": "Engineered for continuous agricultural irrigation and industrial deep borehole water supply. Features 100% electrolytic copper rotor and poly-wrapped stator for zero breakdown even under severe voltage fluctuations (300V - 440V).",
+    "specs": {
+      "Power": "7.5 HP (5.5 kW), 3-Phase 415V",
+      "Well Diameter": "150 mm (6 Inch / V6)",
+      "Speed": "2880 RPM (2-Pole)",
+      "Cooling Type": "Water Lubricated & Cooled",
+      "Thrust Bearing": "Heavy Duty Carbon vs Stainless Steel Segment"
+    },
+    "applications": [
+      "Deep Agricultural Borewells",
+      "Rural Water Supply Schemes"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 24800
+      },
+      {
+        "minQty": 3,
+        "pricePerUnit": 23500
+      }
+    ],
+    "datasheetAvailable": true
+  },
+  {
+    "id": "prod-multispan-amp19",
+    "name": "Multispan AMP19 Digital Microprocessor Ampere Meter",
+    "sku": "MUL-AMP19-D",
+    "slug": "multispan-amp19-digital-microprocessor-ampere-meter",
+    "brand": "Multispan Instruments",
+    "category": "meters-instruments",
+    "subcategory": "Digital Ampere Meters",
+    "price": 1450,
+    "mrp": 1800,
+    "unit": "Piece",
+    "inStock": true,
+    "stockCount": 50,
+    "hsnCode": "90303390",
+    "gstRate": 18,
+    "rating": 4.9,
+    "reviewCount": 39,
+    "featured": false,
+    "badge": "DIGITAL PRECISION",
+    "images": [
+      "/images/apfc_panel.jpg"
+    ],
+    "shortDesc": "7-Segment red LED digital AC ammeter with programmable CT ratio (5A to 6000A) for electrical control panels.",
+    "fullDesc": "Multispan AMP19 provides true RMS digital AC current measurement with 0.5% accuracy. Designed for standard 96x96mm panel cutout with quick snap-in mounting.",
+    "specs": {
+      "Display": "4 Digit 7-Segment 0.56\" Red LED Display",
+      "Input Current": "0 to 5A AC via External CT (Programmable 5A - 6000A)",
+      "Supply Voltage": "100 - 270V AC, 50/60 Hz",
+      "Accuracy": "Class 0.5 True RMS",
+      "Dimensions": "96 x 96 x 50 mm (Cutout: 92 x 92 mm)"
+    },
+    "applications": [
+      "APFC Panels",
+      "Motor Control Centers (MCC)",
+      "Generator Control Desks"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 1450
+      },
+      {
+        "minQty": 5,
+        "pricePerUnit": 1320
+      },
+      {
+        "minQty": 20,
+        "pricePerUnit": 1200
+      }
+    ],
+    "datasheetAvailable": true
+  },
+  {
+    "id": "prod-multispan-vlt19",
+    "name": "Multispan VLT19 Digital AC Voltmeter (Single & 3-Phase)",
+    "sku": "MUL-VLT19-D",
+    "slug": "multispan-vlt19-digital-ac-voltmeter",
+    "brand": "Multispan Instruments",
+    "category": "meters-instruments",
+    "subcategory": "Digital Voltmeters",
+    "price": 1380,
+    "mrp": 1750,
+    "unit": "Piece",
+    "inStock": true,
+    "stockCount": 42,
+    "hsnCode": "90303390",
+    "gstRate": 18,
+    "rating": 4.8,
+    "reviewCount": 28,
+    "featured": false,
+    "badge": "TRUE RMS",
+    "images": [
+      "/images/apfc_panel.jpg"
+    ],
+    "shortDesc": "Digital AC voltmeter measuring Phase-to-Neutral (50-300V) and Phase-to-Phase (50-520V) voltages.",
+    "fullDesc": "High-contrast digital voltage readout prevents motor burnouts from low or unbalance voltages. Built-in over-voltage surge clamp.",
+    "specs": {
+      "Measurement Range": "50 - 520V AC True RMS",
+      "Dimensions": "96 x 96 mm Cutout",
+      "Power Supply": "Self-Powered or 230V AC Auxiliary"
+    },
+    "applications": [
+      "Distribution Boards",
+      "Industrial Switchboards"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 1380
+      },
+      {
+        "minQty": 5,
+        "pricePerUnit": 1260
+      }
+    ],
+    "datasheetAvailable": true
+  },
+  {
+    "id": "prod-entes-apfc-relay",
+    "name": "Entes RG3-12CS Intelligent 12-Step APFC Relay",
+    "sku": "ENT-RG3-12CS",
+    "slug": "entes-rg3-12cs-intelligent-12-step-apfc-relay",
+    "brand": "Entes & Momaya",
+    "category": "meters-instruments",
+    "subcategory": "APFC Relays",
+    "price": 14500,
+    "mrp": 17200,
+    "unit": "Piece",
+    "inStock": true,
+    "stockCount": 15,
+    "hsnCode": "90328990",
+    "gstRate": 18,
+    "rating": 5,
+    "reviewCount": 16,
+    "featured": true,
+    "badge": "MICROPROCESSOR",
+    "images": [
+      "/images/apfc_panel.jpg"
+    ],
+    "shortDesc": "Advanced 12-stage automatic power factor controller with THD harmonics monitoring and Modbus RS-485 output.",
+    "fullDesc": "Controls capacitor stages intelligently to equalize capacitor step wear, detect faulty steps, and prevent harmonic resonance. Used in Dagdi premium APFC panels.",
+    "specs": {
+      "Steps": "12 Control Outputs",
+      "Current Input": "1A / 5A CT Input",
+      "Communication": "RS-485 Modbus RTU",
+      "Measurements": "V, I, Cos φ, Active, Reactive, Apparent Power, THD-V, THD-I",
+      "Alarm Functions": "Over Voltage, Under Voltage, Over Current, High THD"
+    },
+    "applications": [
+      "Heavy APFC Panels",
+      "Smart Energy Management"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 14500
+      },
+      {
+        "minQty": 3,
+        "pricePerUnit": 13800
+      }
+    ],
+    "datasheetAvailable": true
+  },
+  {
+    "id": "prod-momaya-capacitor-25",
+    "name": "Momaya Heavy Duty 25 kVAR 440V Power Capacitor Box",
+    "sku": "MOM-CAP-25K",
+    "slug": "momaya-heavy-duty-25-kvar-440v-power-capacitor-box",
+    "brand": "Entes & Momaya",
+    "category": "meters-instruments",
+    "subcategory": "Power Capacitors",
+    "price": 6800,
+    "mrp": 8200,
+    "unit": "Piece",
+    "inStock": true,
+    "stockCount": 30,
+    "hsnCode": "85322990",
+    "gstRate": 18,
+    "rating": 4.9,
+    "reviewCount": 33,
+    "featured": false,
+    "badge": "SELF-HEALING",
+    "images": [
+      "/images/apfc_panel.jpg"
+    ],
+    "shortDesc": "Gas-filled dry type 3-phase power factor correction capacitor box with overpressure disconnector safety.",
+    "fullDesc": "Heavy-duty metallized polypropylene film capacitor built to withstand harmonic currents and high ambient temperatures up to 60°C inside electrical panel enclosures.",
+    "specs": {
+      "Output": "25 kVAR at 440V 50 Hz",
+      "Capacitance": "3 x 137 μF Delta Connected",
+      "Discharge Resistors": "Built-in (Discharges to <50V in 60 seconds)",
+      "Losses": "< 0.2W / kVAR"
+    },
+    "applications": [
+      "APFC Panels",
+      "Direct Motor Reactive Compensation"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 6800
+      },
+      {
+        "minQty": 4,
+        "pricePerUnit": 6400
+      }
+    ],
+    "datasheetAvailable": true
+  },
+  {
+    "id": "prod-control-transformer-500va",
+    "name": "Industrial Control Transformer 415V to 230V / 24V (500 VA)",
+    "sku": "DAG-XFR-500VA",
+    "slug": "industrial-control-transformer-415v-to-230v-24v-500-va",
+    "brand": "DAGDI Controls & Works",
+    "category": "meters-instruments",
+    "subcategory": "Control Transformers",
+    "price": 3200,
+    "mrp": 3900,
+    "unit": "Piece",
+    "inStock": true,
+    "stockCount": 22,
+    "hsnCode": "85043100",
+    "gstRate": 18,
+    "rating": 4.8,
+    "reviewCount": 15,
+    "featured": false,
+    "badge": "COPPER WOUND",
+    "images": [
+      "/images/apfc_panel.jpg"
+    ],
+    "shortDesc": "CRGO silicon steel core dry step-down control transformer for panel logic, contactors, and relays.",
+    "fullDesc": "Vacuum impregnated with pure copper coils for noise-free and reliable auxiliary power in control panels.",
+    "specs": {
+      "Rating": "500 VA",
+      "Primary Voltage": "0 - 380V - 415V AC",
+      "Secondary Voltage": "0 - 110V - 230V AC and 24V AC tap",
+      "Frequency": "50/60 Hz",
+      "Insulation Class": "Class F (155°C)"
+    },
+    "applications": [
+      "Automation Control Panels",
+      "CNC Machine Auxiliary Power"
+    ],
+    "tierPricing": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 3200
+      },
+      {
+        "minQty": 5,
+        "pricePerUnit": 2950
+      }
+    ],
+    "datasheetAvailable": true
+  }
+]

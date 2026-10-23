@@ -1,0 +1,90 @@
+[
+  {
+    "contactName": "Manoj Patel",
+    "companyName": "Shree Cement Contractors",
+    "gstin": "08AAACS1429B1ZB",
+    "email": "procurement@shreecement.com",
+    "phone": "+91 94140 12345",
+    "city": "Beawar",
+    "state": "Rajasthan",
+    "pincode": "305901",
+    "requestedItems": [
+      {
+        "productName": "150 kVAR APFC Panel with Entes Relay",
+        "quantity": 2,
+        "unit": "Nos",
+        "targetSpecs": "IP54 enclosure, CRCA 2mm, Momaya capacitors"
+      }
+    ],
+    "projectNotes": "",
+    "estimatedBudget": "",
+    "id": "rfq_1792747293765_3x3df",
+    "rfqNumber": "RFQ-2026-0203",
+    "date": "2026-10-23",
+    "status": "New"
+  },
+  {
+    "id": "rfq-2026-801",
+    "rfqNumber": "RFQ-2026-801",
+    "date": "2026-10-21 16:40",
+    "contactName": "Er. Sunil Sharma (Plant Electrical Head)",
+    "companyName": "Shree Rajasthan Mineral Processing Works",
+    "gstin": "08AABCS9821L1ZN",
+    "email": "electrical@shreeminerals.co.in",
+    "phone": "+91 98292 34567",
+    "city": "Kishangarh",
+    "state": "Rajasthan",
+    "pincode": "305801",
+    "requestedItems": [
+      {
+        "productId": "prod-apfc-150",
+        "productName": "Automatic Power Factor Control (APFC) Panel - 150 kVAR",
+        "quantity": 2,
+        "unit": "Pieces",
+        "targetSpecs": "Needs custom 50 kVAR detuned reactors for 5th & 7th harmonic mitigation on VFD loads."
+      },
+      {
+        "productId": "prod-ab-switch-11kv",
+        "productName": "11kV Gang Operated Air Break (AB) Switch Triple Pole",
+        "quantity": 1,
+        "unit": "Set",
+        "targetSpecs": "400A outdoor rated with porcelain post insulators."
+      }
+    ],
+    "projectNotes": "Project expansion for granite processing plant. Delivery required by 10th of next month at Kishangarh marble zone.",
+    "estimatedBudget": "₹ 5,50,000 - ₹ 6,00,000",
+    "status": "Quotation Prepared",
+    "assignedTo": "Sandesh Dagdi Saini",
+    "adminNotes": "Discount approved 6% for 2 panels. Quotation draft emailed with test certificates."
+  },
+  {
+    "id": "rfq-2026-802",
+    "rfqNumber": "RFQ-2026-802",
+    "date": "2026-10-23 10:10",
+    "contactName": "Bhagwan Singh (Contractor)",
+    "companyName": "Singh Electrical Contractors & Borewell Engineers",
+    "email": "singh.contractors.ajmer@gmail.com",
+    "phone": "+91 97841 88990",
+    "city": "Ajmer",
+    "state": "Rajasthan",
+    "pincode": "305001",
+    "requestedItems": [
+      {
+        "productName": "Milan Enameled Copper Wire SWG 20 & 22",
+        "quantity": 120,
+        "unit": "Kg",
+        "targetSpecs": "Dual coat class H for rewinding 20 nos submersible pump motors."
+      },
+      {
+        "productName": "KEI 3-Core Submersible Cable 6.0 sq mm",
+        "quantity": 400,
+        "unit": "Meters"
+      }
+    ],
+    "projectNotes": "Urgent bulk requirement for PHED water supply contract overhaul.",
+    "estimatedBudget": "₹ 1,80,000",
+    "status": "New",
+    "assignedTo": "Unassigned",
+    "adminNotes": "Verify available stock of SWG 20 in Beawar godown before calling back."
+  }
+]

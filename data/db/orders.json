@@ -1,0 +1,78 @@
+[
+  {
+    "id": "ord-1001",
+    "orderNumber": "DGD-2026-1001",
+    "date": "2026-10-22 14:32",
+    "customerName": "Kailash Choudhary (Marwar Stone Mills)",
+    "email": "kailash.stone@gmail.com",
+    "phone": "+91 98290 11223",
+    "address": "Plot 44, Industrial Area, Sendra Road",
+    "city": "Beawar",
+    "state": "Rajasthan",
+    "pincode": "305901",
+    "isB2B": true,
+    "gstin": "08AAACM4912K1Z4",
+    "companyName": "Marwar Stone Mills Pvt Ltd",
+    "items": [
+      {
+        "productId": "prod-ador-e7018-315",
+        "productName": "Ador Welding Electrode E7018 Super-6 (3.15mm x 450mm)",
+        "sku": "ADOR-E7018-315",
+        "price": 2420,
+        "quantity": 5,
+        "unit": "Box (20 Kg)",
+        "image": "/images/welding_electrodes.jpg"
+      },
+      {
+        "productId": "prod-kei-3core-submersible-cable",
+        "productName": "KEI 3-Core Flat Submersible Copper Cable (4.0 sq mm)",
+        "sku": "KEI-3C-SUB-4MM",
+        "price": 172,
+        "quantity": 100,
+        "unit": "Meter",
+        "image": "/images/copper_wire.jpg"
+      }
+    ],
+    "subtotal": 29300,
+    "taxAmount": 5274,
+    "shippingCost": 0,
+    "discountAmount": 1000,
+    "couponCode": "DAGDIPOWER",
+    "totalAmount": 33574,
+    "paymentMethod": "UPI",
+    "paymentStatus": "Paid",
+    "orderStatus": "Dispatched"
+  },
+  {
+    "id": "ord-1002",
+    "orderNumber": "DGD-2026-1002",
+    "date": "2026-10-23 09:15",
+    "customerName": "Rameshwar Lal Gurjar",
+    "email": "rameshwar.gurjar@yahoo.com",
+    "phone": "+91 94140 77889",
+    "address": "Near Government Hospital, Chhawani",
+    "city": "Beawar",
+    "state": "Rajasthan",
+    "pincode": "305901",
+    "isB2B": false,
+    "items": [
+      {
+        "productId": "prod-dh-6013-315",
+        "productName": "D&H 6013 General Purpose Welding Rods (3.15mm)",
+        "sku": "DH-6013-315",
+        "price": 2100,
+        "quantity": 2,
+        "unit": "Box (20 Kg)",
+        "image": "/images/welding_electrodes.jpg"
+      }
+    ],
+    "subtotal": 4200,
+    "taxAmount": 756,
+    "shippingCost": 150,
+    "discountAmount": 0,
+    "totalAmount": 5106,
+    "paymentMethod": "COD",
+    "paymentStatus": "COD Verified",
+    "orderStatus": "Processing"
+  }
+]
