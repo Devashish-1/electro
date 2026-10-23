@@ -199,9 +199,6 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     setPageParam(param || null);
     setMobileMenuOpen(false);
     if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-
-      // Update browser history URL for Next.js friendly routing
       let targetPath = '/';
       switch (page) {
         case 'home': targetPath = '/'; break;
@@ -210,6 +207,9 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
           break;
         case 'catalog':
           targetPath = param?.category && param.category !== 'all' ? `/category/${encodeURIComponent(param.category)}` : '/catalog';
+          if (param?.query) {
+            targetPath += `?search=${encodeURIComponent(param.query)}`;
+          }
           break;
         case 'product-detail':
           targetPath = `/products/${param?.slug || param?.id || ''}`;
@@ -226,12 +226,11 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         case 'order-tracking': targetPath = '/order-tracking'; break;
         case 'admin': targetPath = '/admin'; break;
       }
-      try {
-        if (window.location.pathname !== targetPath) {
-          window.history.pushState({}, '', targetPath);
-        }
-      } catch (e) {
-        // Safe fallback
+
+      if (window.location.pathname !== targetPath) {
+        window.location.href = targetPath;
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }
   };

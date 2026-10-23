@@ -37,7 +37,19 @@ export const ProductDetailPage: React.FC<{ initialProduct?: Product }> = ({ init
     storeConfig
   } = useStore();
 
-  const product: Product = initialProduct || pageParam || products[0];
+  const product: Product = React.useMemo(() => {
+    if (initialProduct) return initialProduct;
+    if (pageParam && (pageParam.id || pageParam.slug)) return pageParam;
+    if (typeof window !== 'undefined') {
+      const parts = window.location.pathname.split('/');
+      const slugOrId = decodeURIComponent(parts[parts.length - 1] || '');
+      if (slugOrId) {
+        const found = products.find((p) => p.slug === slugOrId || p.id === slugOrId);
+        if (found) return found;
+      }
+    }
+    return products[0];
+  }, [initialProduct, pageParam, products]);
 
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);

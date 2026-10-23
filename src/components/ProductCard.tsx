@@ -1,6 +1,5 @@
-'use client';
-
 import React from 'react';
+import Link from 'next/link';
 import { Product } from '../types';
 import { useStore } from '../context/StoreContext';
 import { ShoppingCart, Heart, Scale, Eye, FileText, CheckCircle2, Star } from 'lucide-react';
@@ -27,28 +26,31 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, compact = fal
   const discountPercent = Math.round(((product.mrp - product.price) / product.mrp) * 100);
 
   const handleQuickAdd = (e: React.MouseEvent) => {
+    e.preventDefault();
     e.stopPropagation();
     addToCart(product, 1);
   };
 
   const handleToggleWishlist = (e: React.MouseEvent) => {
+    e.preventDefault();
     e.stopPropagation();
     toggleWishlist(product.id);
   };
 
   const handleToggleCompare = (e: React.MouseEvent) => {
+    e.preventDefault();
     e.stopPropagation();
     addToCompare(product);
   };
 
-  const handleCardClick = () => {
-    navigateTo('product-detail', product);
-  };
+  const productUrl = `/products/${product.slug || product.id}`;
 
   return (
-    <div
-      onClick={handleCardClick}
+    <Link
+      href={productUrl}
       style={{
+        textDecoration: 'none',
+        color: 'inherit',
         backgroundColor: '#ffffff',
         borderRadius: 'var(--radius-lg)',
         border: '1px solid var(--color-surface-border)',
@@ -135,6 +137,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, compact = fal
 
         <button
           onClick={(e) => {
+            e.preventDefault();
             e.stopPropagation();
             setQuickViewProduct(product);
           }}
@@ -284,6 +287,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, compact = fal
 
           <button
             onClick={(e) => {
+              e.preventDefault();
               e.stopPropagation();
               setRfqModalOpen(true);
             }}
@@ -295,6 +299,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, compact = fal
           </button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
