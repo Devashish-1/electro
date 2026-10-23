@@ -219,68 +219,116 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 2. CATEGORY TILES SHOWCASE */}
+      {/* 2. DEDICATED CATEGORY HUBS */}
       <section className="container">
         <div className="section-title-wrap">
           <div className="section-tag">
             <Zap size={14} /> Comprehensive Inventory
           </div>
-          <h2 className="section-heading">Explore by Product Category</h2>
+          <h2 className="section-heading">Browse Dedicated Category Hubs</h2>
           <p className="section-subheading">
-            Supplying heavy industrial plants, fabricators, agricultural installations, and electrical contractors.
+            Each category features complete engineering specifications, subcategory filters, and direct B2B pricing.
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
           {categories.map((cat) => (
             <div
               key={cat.id}
-              onClick={() => navigateTo('catalog', { category: cat.id })}
+              onClick={() => navigateTo('category', { slug: cat.id })}
               style={{
                 backgroundColor: '#ffffff',
                 borderRadius: 'var(--radius-lg)',
                 border: '1px solid var(--color-surface-border)',
                 overflow: 'hidden',
                 cursor: 'pointer',
-                boxShadow: 'var(--shadow-xs)',
-                transition: 'all var(--transition-normal)',
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05)',
+                transition: 'all 0.25s cubic-bezier(0.16, 1, 0.3, 1)',
                 display: 'flex',
                 flexDirection: 'column'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-4px)';
-                e.currentTarget.style.boxShadow = 'var(--shadow-md)';
+                e.currentTarget.style.transform = 'translateY(-6px)';
+                e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(2, 132, 199, 0.15), 0 8px 10px -6px rgba(2, 132, 199, 0.1)';
                 e.currentTarget.style.borderColor = 'var(--color-accent-blue)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'var(--shadow-xs)';
+                e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05)';
                 e.currentTarget.style.borderColor = 'var(--color-surface-border)';
               }}
             >
-              <div style={{ width: '100%', height: '160px', backgroundColor: '#f8fafc', overflow: 'hidden', padding: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: '100%', height: '170px', backgroundColor: '#f8fafc', overflow: 'hidden', padding: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
                 <img
                   src={cat.image}
                   alt={cat.name}
-                  style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }}
+                  style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain', transition: 'transform 0.3s' }}
                 />
+                <span
+                  style={{
+                    position: 'absolute',
+                    top: '12px',
+                    right: '12px',
+                    backgroundColor: 'rgba(2, 132, 199, 0.1)',
+                    color: '#0284c7',
+                    border: '1px solid rgba(2, 132, 199, 0.2)',
+                    padding: '3px 8px',
+                    borderRadius: 'var(--radius-full)',
+                    fontSize: '11px',
+                    fontWeight: 700
+                  }}
+                >
+                  {cat.count} Products
+                </span>
               </div>
 
-              <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', flex: 1 }}>
-                <div className="flex items-center justify-between" style={{ marginBottom: '6px' }}>
-                  <h3 style={{ fontSize: '15px', fontWeight: 800, color: 'var(--color-primary-900)' }}>
-                    {cat.name}
-                  </h3>
-                  <span className="badge badge-blue" style={{ fontSize: '10px' }}>
-                    {cat.count} Items
-                  </span>
-                </div>
-                <p style={{ fontSize: '12px', color: 'var(--color-text-muted)', lineHeight: 1.4, marginBottom: '14px' }}>
+              <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                <h3 style={{ fontSize: '17px', fontWeight: 800, color: 'var(--color-primary-900)', marginBottom: '6px' }}>
+                  {cat.name}
+                </h3>
+                <p style={{ fontSize: '12px', color: 'var(--color-text-muted)', lineHeight: 1.5, marginBottom: '14px' }}>
                   {cat.description}
                 </p>
-                <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '4px', fontSize: '12px', fontWeight: 700, color: 'var(--color-accent-blue)' }}>
-                  <span>View Products</span>
-                  <ArrowRight size={14} />
+
+                {/* Subcategory Pills */}
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '18px' }}>
+                  {cat.subcategories.slice(0, 3).map((sub) => (
+                    <span
+                      key={sub}
+                      style={{
+                        fontSize: '11px',
+                        backgroundColor: '#f1f5f9',
+                        color: '#475569',
+                        padding: '3px 8px',
+                        borderRadius: '4px',
+                        fontWeight: 500
+                      }}
+                    >
+                      {sub}
+                    </span>
+                  ))}
+                  {cat.subcategories.length > 3 && (
+                    <span style={{ fontSize: '11px', color: '#94a3b8', padding: '3px 4px' }}>
+                      +{cat.subcategories.length - 3} more
+                    </span>
+                  )}
+                </div>
+
+                <div
+                  style={{
+                    marginTop: 'auto',
+                    paddingTop: '12px',
+                    borderTop: '1px solid #f1f5f9',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    fontSize: '13px',
+                    fontWeight: 700,
+                    color: 'var(--color-accent-blue)'
+                  }}
+                >
+                  <span>Open Category Hub</span>
+                  <ArrowRight size={16} />
                 </div>
               </div>
             </div>
@@ -504,30 +552,7 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 7. WELDING SOLUTIONS SPOTLIGHT */}
-      <section className="container">
-        <div className="flex items-center justify-between" style={{ marginBottom: '24px' }}>
-          <div>
-            <div className="section-tag">
-              <Zap size={14} /> Authorized Welding Depot
-            </div>
-            <h2 className="section-heading">Ador & D&H Welding Electrodes</h2>
-          </div>
-          <button
-            onClick={() => navigateTo('catalog', { category: 'welding-solutions' })}
-            className="btn btn-outline btn-sm flex items-center gap-1"
-          >
-            <span>View All Welding Products</span>
-            <ArrowRight size={14} />
-          </button>
-        </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px' }}>
-          {weldingProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-      </section>
 
       {/* 8. AUTHORIZED BRANDS DIRECTORY */}
       <section className="container">

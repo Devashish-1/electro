@@ -201,8 +201,11 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       let targetPath = '/';
       switch (page) {
         case 'home': targetPath = '/'; break;
+        case 'category':
+          targetPath = `/category/${param?.slug || param?.id || param || ''}`;
+          break;
         case 'catalog':
-          targetPath = param?.category ? `/catalog?category=${encodeURIComponent(param.category)}` : '/catalog';
+          targetPath = param?.category && param.category !== 'all' ? `/category/${encodeURIComponent(param.category)}` : '/catalog';
           break;
         case 'product-detail':
           targetPath = `/products/${param?.slug || param?.id || ''}`;

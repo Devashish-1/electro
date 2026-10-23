@@ -19,7 +19,10 @@ import {
   ShieldCheck,
   CheckCircle,
   Clock,
-  ArrowRight
+  ArrowRight,
+  Cpu,
+  Package,
+  Settings
 } from 'lucide-react';
 
 export const Header: React.FC = () => {
@@ -97,8 +100,9 @@ export const Header: React.FC = () => {
   return (
     <header style={{ position: 'sticky', top: 0, zIndex: 100, backgroundColor: '#ffffff', boxShadow: 'var(--shadow-sm)' }}>
       {/* 1. TOP ANNOUNCEMENT STRIP */}
+      {/* 1. TOP ANNOUNCEMENT STRIP (Desktop only) */}
       {storeConfig.announcementActive && (
-        <div style={{ backgroundColor: 'var(--color-primary-950)', color: '#93c5fd', fontSize: '12px', padding: '6px 0', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+        <div className="desktop-only" style={{ backgroundColor: 'var(--color-primary-950)', color: '#93c5fd', fontSize: '12px', padding: '6px 0', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
           <div className="container flex items-center justify-between" style={{ flexWrap: 'wrap', gap: '8px' }}>
             <div className="flex items-center gap-2">
               <span className="badge badge-amber" style={{ fontSize: '10px', padding: '2px 6px' }}>OFFICIAL PORTAL</span>
@@ -107,9 +111,6 @@ export const Header: React.FC = () => {
             <div className="flex items-center gap-4" style={{ fontSize: '12px', color: '#cbd5e1' }}>
               <span className="flex items-center gap-1">
                 <ShieldCheck size={14} color="#10b981" /> GSTIN: <strong>{storeConfig.gstin}</strong>
-              </span>
-              <span className="flex items-center gap-1" style={{ display: 'none' }} id="top-workshop-time">
-                <Clock size={14} /> Workshop: Mon-Sat 8AM - 8PM
               </span>
               <button
                 onClick={() => navigateTo('admin')}
@@ -123,8 +124,8 @@ export const Header: React.FC = () => {
         </div>
       )}
 
-      {/* 2. TOP UTILITY STRIP */}
-      <div style={{ backgroundColor: '#ffffff', borderBottom: '1px solid var(--color-surface-border)', padding: '6px 0', fontSize: '13px' }}>
+      {/* 2. TOP UTILITY STRIP (Desktop only) */}
+      <div className="desktop-only" style={{ backgroundColor: '#ffffff', borderBottom: '1px solid var(--color-surface-border)', padding: '6px 0', fontSize: '13px' }}>
         <div className="container flex items-center justify-between">
           <div className="flex items-center gap-4" style={{ color: 'var(--color-text-muted)' }}>
             <span className="flex items-center gap-1">
@@ -179,11 +180,10 @@ export const Header: React.FC = () => {
           {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            style={{ display: 'none' }}
             className="mobile-burger-btn"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
 
           {/* Logo & Brand Identity */}
@@ -523,8 +523,8 @@ export const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* 4. CATEGORY NAVIGATION & MEGA MENU STRIP */}
-      <div style={{ backgroundColor: 'var(--color-primary-900)', color: '#ffffff', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+      {/* 4. CATEGORY NAVIGATION & MEGA MENU STRIP (Desktop only) */}
+      <div className="desktop-only" style={{ backgroundColor: 'var(--color-primary-900)', color: '#ffffff', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
         <div className="container flex items-center justify-between" style={{ padding: '0 20px', height: '44px' }}>
           <div className="flex items-center gap-1" style={{ height: '100%' }}>
             {/* All Categories Mega Trigger */}
@@ -575,7 +575,7 @@ export const Header: React.FC = () => {
                       <div
                         onClick={() => {
                           setMegaMenuOpen(false);
-                          navigateTo('catalog', { category: cat.id });
+                          navigateTo('category', { slug: cat.id });
                         }}
                         style={{
                           fontWeight: 700,
@@ -641,7 +641,7 @@ export const Header: React.FC = () => {
             {categories.map((cat) => (
               <button
                 key={cat.id}
-                onClick={() => navigateTo('catalog', { category: cat.id })}
+                onClick={() => navigateTo('category', { slug: cat.id })}
                 style={{
                   color: '#e2e8f0',
                   fontSize: '13px',
@@ -688,7 +688,277 @@ export const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* 5. DELIVERY PINCODE MODAL */}
+      {/* 5. MOBILE SLIDE-OVER DRAWER */}
+      {mobileMenuOpen && (
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 9999,
+            display: 'flex',
+            backgroundColor: 'rgba(15, 23, 42, 0.75)',
+            backdropFilter: 'blur(4px)',
+            animation: 'fadeIn 0.2s ease-out'
+          }}
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          <div
+            style={{
+              width: '85%',
+              maxWidth: '340px',
+              height: '100%',
+              backgroundColor: '#ffffff',
+              overflowY: 'auto',
+              display: 'flex',
+              flexDirection: 'column',
+              boxShadow: '0 25px 50px -12px rgba(0,0,0,0.4)',
+              animation: 'slideInLeft 0.25s ease-out'
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Drawer Header */}
+            <div
+              style={{
+                padding: '16px',
+                backgroundColor: 'var(--color-primary-950)',
+                color: '#ffffff',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'between',
+                borderBottom: '1px solid rgba(255,255,255,0.1)'
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: 'linear-gradient(135deg, #0284c7, #0369a1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 900, fontSize: '18px' }}>
+                  D
+                </div>
+                <div>
+                  <div style={{ fontWeight: 800, fontSize: '15px', letterSpacing: '-0.02em', color: '#ffffff' }}>DAGDI ELECTRICALS</div>
+                  <div style={{ fontSize: '11px', color: '#94a3b8' }}>Beawar Industrial Portal</div>
+                </div>
+              </div>
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                style={{
+                  background: 'rgba(255,255,255,0.1)',
+                  border: 'none',
+                  borderRadius: '6px',
+                  color: '#ffffff',
+                  padding: '6px',
+                  cursor: 'pointer',
+                  marginLeft: 'auto'
+                }}
+                aria-label="Close menu"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            {/* Quick Action Buttons */}
+            <div style={{ padding: '12px 16px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', backgroundColor: '#f8fafc', borderBottom: '1px solid #e2e8f0' }}>
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  setRfqModalOpen(true);
+                }}
+                style={{
+                  padding: '8px 10px',
+                  backgroundColor: '#f59e0b',
+                  color: '#ffffff',
+                  borderRadius: '6px',
+                  fontSize: '12px',
+                  fontWeight: 700,
+                  border: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '6px'
+                }}
+              >
+                <FileText size={14} /> Request RFQ
+              </button>
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  setRewindingModalOpen(true);
+                }}
+                style={{
+                  padding: '8px 10px',
+                  backgroundColor: '#0284c7',
+                  color: '#ffffff',
+                  borderRadius: '6px',
+                  fontSize: '12px',
+                  fontWeight: 700,
+                  border: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '6px'
+                }}
+              >
+                <Wrench size={14} /> Rewinding
+              </button>
+            </div>
+
+            {/* Categories Navigation */}
+            <div style={{ padding: '16px' }}>
+              <div style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#64748b', marginBottom: '10px' }}>
+                Industrial Categories
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                {categories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      navigateTo('category', { slug: cat.id });
+                    }}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      padding: '10px 12px',
+                      backgroundColor: '#f8fafc',
+                      borderRadius: '8px',
+                      border: '1px solid #e2e8f0',
+                      textAlign: 'left',
+                      fontWeight: 600,
+                      fontSize: '13px',
+                      color: '#0f172a'
+                    }}
+                  >
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <span style={{ color: '#0284c7' }}>⚡</span>
+                      <span>{cat.name}</span>
+                    </span>
+                    <span style={{ fontSize: '11px', color: '#94a3b8', backgroundColor: '#e2e8f0', padding: '2px 6px', borderRadius: '4px' }}>
+                      {cat.subcategories.length}
+                    </span>
+                  </button>
+                ))}
+              </div>
+
+              {/* Tools & Services */}
+              <div style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#64748b', marginTop: '20px', marginBottom: '10px' }}>
+                Industrial Tools
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    navigateTo('apfc-calculator');
+                  }}
+                  style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px 10px', fontSize: '13px', fontWeight: 500, color: '#334155', background: 'none', border: 'none', textAlign: 'left', width: '100%', borderRadius: '6px' }}
+                >
+                  <Cpu size={16} color="#0284c7" />
+                  <span>APFC Capacitor Calculator</span>
+                </button>
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    navigateTo('quotation-builder');
+                  }}
+                  style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px 10px', fontSize: '13px', fontWeight: 500, color: '#334155', background: 'none', border: 'none', textAlign: 'left', width: '100%', borderRadius: '6px' }}
+                >
+                  <FileText size={16} color="#f59e0b" />
+                  <span>B2B Quotation Builder</span>
+                </button>
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    navigateTo('order-tracking');
+                  }}
+                  style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px 10px', fontSize: '13px', fontWeight: 500, color: '#334155', background: 'none', border: 'none', textAlign: 'left', width: '100%', borderRadius: '6px' }}
+                >
+                  <Package size={16} color="#10b981" />
+                  <span>Track Order / Dispatch</span>
+                </button>
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    navigateTo('about');
+                  }}
+                  style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px 10px', fontSize: '13px', fontWeight: 500, color: '#334155', background: 'none', border: 'none', textAlign: 'left', width: '100%', borderRadius: '6px' }}
+                >
+                  <ShieldCheck size={16} color="#6366f1" />
+                  <span>About Dagdi Electricals</span>
+                </button>
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    navigateTo('contact');
+                  }}
+                  style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px 10px', fontSize: '13px', fontWeight: 500, color: '#334155', background: 'none', border: 'none', textAlign: 'left', width: '100%', borderRadius: '6px' }}
+                >
+                  <MapPin size={16} color="#ef4444" />
+                  <span>Godown Location & Contact</span>
+                </button>
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    navigateTo('admin');
+                  }}
+                  style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px 10px', fontSize: '13px', fontWeight: 500, color: '#9333ea', background: 'none', border: 'none', textAlign: 'left', width: '100%', borderRadius: '6px' }}
+                >
+                  <Settings size={16} color="#9333ea" />
+                  <span>Admin CMS Management</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Direct Contact Footer */}
+            <div style={{ marginTop: 'auto', padding: '16px', backgroundColor: '#f1f5f9', borderTop: '1px solid #e2e8f0' }}>
+              <div style={{ fontSize: '11px', color: '#64748b', marginBottom: '8px' }}>
+                GSTIN: <strong>{storeConfig.gstin}</strong>
+              </div>
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <a
+                  href={`tel:${storeConfig.phone1}`}
+                  style={{
+                    flex: 1,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '6px',
+                    padding: '8px',
+                    backgroundColor: '#16a34a',
+                    color: '#ffffff',
+                    borderRadius: '6px',
+                    fontSize: '12px',
+                    fontWeight: 700,
+                    textDecoration: 'none'
+                  }}
+                >
+                  <Phone size={14} /> Call Office
+                </a>
+                <a
+                  href={`https://wa.me/91${(storeConfig as any).whatsappNumber || storeConfig.phone1.replace(/\D/g, '') || '9414281395'}?text=${encodeURIComponent('Hello Dagdi Electricals, I need pricing details for industrial supplies.')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    flex: 1,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '6px',
+                    padding: '8px',
+                    backgroundColor: '#25D366',
+                    color: '#ffffff',
+                    borderRadius: '6px',
+                    fontSize: '12px',
+                    fontWeight: 700,
+                    textDecoration: 'none'
+                  }}
+                >
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 6. DELIVERY PINCODE MODAL */}
       {pincodeModalOpen && (
         <div
           style={{
