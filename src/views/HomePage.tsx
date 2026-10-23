@@ -64,7 +64,7 @@ export const HomePage: React.FC = () => {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
               gap: '40px',
               alignItems: 'center'
             }}
@@ -93,7 +93,7 @@ export const HomePage: React.FC = () => {
 
               <h1
                 style={{
-                  fontSize: '44px',
+                  fontSize: 'clamp(26px, 5.5vw, 44px)',
                   fontWeight: 900,
                   lineHeight: 1.15,
                   letterSpacing: '-1px',
@@ -150,7 +150,7 @@ export const HomePage: React.FC = () => {
               <div
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(95px, 1fr))',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 75px), 1fr))',
                   gap: '12px',
                   paddingTop: '20px',
                   borderTop: '1px solid rgba(255, 255, 255, 0.12)'
@@ -233,7 +233,7 @@ export const HomePage: React.FC = () => {
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '24px' }}>
           {categories.map((cat) => (
             <div
               key={cat.id}
@@ -485,7 +485,7 @@ export const HomePage: React.FC = () => {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
               gap: '40px',
               alignItems: 'center'
             }}
@@ -619,7 +619,7 @@ export const HomePage: React.FC = () => {
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '20px' }}>
           <div style={{ backgroundColor: '#ffffff', borderRadius: 'var(--radius-lg)', padding: '24px', border: '1px solid var(--color-surface-border)' }}>
             <span className="badge badge-blue" style={{ marginBottom: '8px' }}>WELDING GUIDE</span>
             <h3 style={{ fontSize: '16px', fontWeight: 800, color: 'var(--color-primary-900)', marginBottom: '8px' }}>

@@ -10,6 +10,7 @@ import { CompareModal } from '@/components/CompareModal';
 import { RfqModal } from '@/components/RfqModal';
 import { RewindingServiceModal } from '@/components/RewindingServiceModal';
 import { AiAdvisorModal } from '@/components/AiAdvisorModal';
+import { MobileBottomNav } from '@/components/MobileBottomNav';
 
 const ShellContent: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { activePage } = useStore();
@@ -23,6 +24,9 @@ const ShellContent: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 
       {/* Show footer on all pages except admin */}
       {activePage !== 'admin' && <Footer />}
+
+      {/* Mobile Sticky Bottom App Bar */}
+      <MobileBottomNav />
 
       {/* Global Interactive Overlays */}
       <CartDrawer />

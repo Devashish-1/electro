@@ -116,7 +116,7 @@ GSTIN: ${storeConfig.gstin} | Phone: ${storeConfig.phone1}
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))',
           gap: '40px',
           marginBottom: '48px'
         }}

@@ -104,7 +104,8 @@ export const CompareModal: React.FC = () => {
               </button>
             </div>
           ) : (
-            <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', minWidth: '600px' }}>
+            <div className="responsive-table-wrap" style={{ width: '100%', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', minWidth: '600px' }}>
               <thead>
                 <tr>
                   <th style={{ width: '220px', padding: '12px', backgroundColor: '#f8fafc', borderBottom: '2px solid var(--color-surface-border-strong)', fontSize: '13px', color: 'var(--color-text-subtle)' }}>
@@ -206,7 +207,8 @@ export const CompareModal: React.FC = () => {
                 ))}
               </tbody>
             </table>
-          )}
+          </div>
+        )}
         </div>
       </div>
     </div>

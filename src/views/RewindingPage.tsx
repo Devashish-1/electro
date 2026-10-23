@@ -75,7 +75,7 @@ export const RewindingPage: React.FC = () => {
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '20px' }}>
           {[
             { step: '01', title: 'Initial Megger & Surge Diagnosis', desc: 'Inspection of insulation resistance, winding short circuits, phase imbalance, and rotor eccentricity.' },
             { step: '02', title: 'Controlled Stripping & Core Inspection', desc: 'Coil burnout removal without heating stator laminations above 350°C to preserve magnetic core flux.' },
@@ -117,7 +117,7 @@ export const RewindingPage: React.FC = () => {
             border: '1px solid var(--color-surface-border)',
             padding: '36px',
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
             gap: '32px',
             alignItems: 'center',
             boxShadow: 'var(--shadow-sm)'

@@ -34,6 +34,8 @@ export const Header: React.FC = () => {
     pincode,
     setPincode,
     setCartDrawerOpen,
+    mobileMenuOpen,
+    setMobileMenuOpen,
     setRfqModalOpen,
     setCompareModalOpen,
     setAiAssistantOpen,
@@ -45,7 +47,6 @@ export const Header: React.FC = () => {
     products
   } = useStore();
 
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
   const [searchFocused, setSearchFocused] = useState(false);
   const [pincodeModalOpen, setPincodeModalOpen] = useState(false);
@@ -177,13 +178,16 @@ export const Header: React.FC = () => {
       {/* 3. MAIN HEADER BAR */}
       <div className="container" style={{ padding: '12px 20px' }}>
         <div className="flex items-center justify-between gap-4">
-          {/* Mobile Menu Toggle Button */}
+          {/* Mobile 3-Line Menu Toggle Button */}
           <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onClick={() => setMobileMenuOpen(true)}
             className="mobile-burger-btn"
-            aria-label="Toggle menu"
+            aria-label="Open 3-Line Navigation Menu"
+            title="3-Line Menu"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <span className="burger-line" />
+            <span className="burger-line" />
+            <span className="burger-line" />
           </button>
 
           {/* Logo & Brand Identity */}
@@ -772,11 +776,11 @@ export const Header: React.FC = () => {
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: 'linear-gradient(135deg, #0284c7, #0369a1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 900, fontSize: '18px' }}>
-                  D
+                  ⚡
                 </div>
                 <div>
                   <div style={{ fontWeight: 800, fontSize: '15px', letterSpacing: '-0.02em', color: '#ffffff' }}>DAGDI ELECTRICALS</div>
-                  <div style={{ fontSize: '11px', color: '#94a3b8' }}>Beawar Industrial Portal</div>
+                  <div style={{ fontSize: '11px', color: '#94a3b8' }}>GSTIN: {storeConfig.gstin}</div>
                 </div>
               </div>
               <button
@@ -888,7 +892,7 @@ export const Header: React.FC = () => {
                 <button
                   onClick={() => {
                     setMobileMenuOpen(false);
-                    navigateTo('apfc-calculator');
+                    navigateTo('calculator');
                   }}
                   style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px 10px', fontSize: '13px', fontWeight: 500, color: '#334155', background: 'none', border: 'none', textAlign: 'left', width: '100%', borderRadius: '6px' }}
                 >

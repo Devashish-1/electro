@@ -32,7 +32,7 @@ export const AboutPage: React.FC = () => {
 
       {/* Story & Background */}
       <section className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '40px', alignItems: 'center' }}>
           <div>
             <h2 style={{ fontSize: '26px', fontWeight: 800, color: 'var(--color-primary-900)', marginBottom: '16px' }}>
               Established in 2017 in the Heart of Rajasthan's Industrial Corridor

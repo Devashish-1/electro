@@ -19,6 +19,7 @@ interface StoreContextType {
   searchQuery: string;
   selectedCategory: string;
   cartDrawerOpen: boolean;
+  mobileMenuOpen: boolean;
   rfqModalOpen: boolean;
   compareModalOpen: boolean;
   aiAssistantOpen: boolean;
@@ -32,6 +33,7 @@ interface StoreContextType {
   setSearchQuery: (query: string) => void;
   setSelectedCategory: (cat: string) => void;
   setCartDrawerOpen: (open: boolean) => void;
+  setMobileMenuOpen: (open: boolean) => void;
   setRfqModalOpen: (open: boolean) => void;
   setCompareModalOpen: (open: boolean) => void;
   setAiAssistantOpen: (open: boolean) => void;
@@ -90,6 +92,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const [cartDrawerOpen, setCartDrawerOpen] = useState<boolean>(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   const [rfqModalOpen, setRfqModalOpen] = useState<boolean>(false);
   const [compareModalOpen, setCompareModalOpen] = useState<boolean>(false);
   const [aiAssistantOpen, setAiAssistantOpen] = useState<boolean>(false);
@@ -194,6 +197,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const navigateTo = (page: string, param?: any) => {
     setActivePage(page);
     setPageParam(param || null);
+    setMobileMenuOpen(false);
     if (typeof window !== 'undefined') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
@@ -460,6 +464,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         searchQuery,
         selectedCategory,
         cartDrawerOpen,
+        mobileMenuOpen,
         rfqModalOpen,
         compareModalOpen,
         aiAssistantOpen,
@@ -472,6 +477,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         setSearchQuery,
         setSelectedCategory,
         setCartDrawerOpen,
+        setMobileMenuOpen,
         setRfqModalOpen,
         setCompareModalOpen,
         setAiAssistantOpen,

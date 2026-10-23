@@ -145,7 +145,7 @@ export const CatalogPage: React.FC = () => {
       </div>
 
       {/* 2. DEDICATED CATEGORY TABS STRIP */}
-      <div style={{ backgroundColor: '#ffffff', borderBottom: '1px solid var(--color-surface-border)', padding: '14px 0', overflowX: 'auto' }}>
+      <div style={{ backgroundColor: '#ffffff', borderBottom: '1px solid var(--color-surface-border)', padding: '12px 0', width: '100%', overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         <div className="container flex items-center gap-2" style={{ minWidth: 'max-content' }}>
           <button
             onClick={() => {
@@ -215,7 +215,7 @@ export const CatalogPage: React.FC = () => {
           {/* Left: Quick search and filters */}
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '12px', flex: 1 }}>
             {/* Search within results */}
-            <div style={{ position: 'relative', minWidth: '220px', flex: '1 1 220px' }}>
+            <div style={{ position: 'relative', minWidth: 'min(100%, 200px)', flex: '1 1 200px' }}>
               <input
                 type="text"
                 placeholder="Search models, parts, HSN..."

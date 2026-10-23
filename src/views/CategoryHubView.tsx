@@ -341,7 +341,7 @@ export const CategoryHubView: React.FC<CategoryHubViewProps> = ({ category, init
             padding: '32px',
             border: '1px solid var(--color-surface-border)',
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
             gap: '24px',
             alignItems: 'center',
             boxShadow: 'var(--shadow-sm)',
