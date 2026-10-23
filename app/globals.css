@@ -81,6 +81,9 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 body {
@@ -92,10 +95,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
 }
 
 #root, #__next, body {
   min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 img, svg {
@@ -416,9 +424,24 @@ input, select, textarea {
     color: var(--color-primary-900);
     cursor: pointer;
     transition: background 0.2s;
+    flex-shrink: 0;
   }
   .mobile-burger-btn:hover {
     background-color: #e2e8f0;
+  }
+
+  /* Prevent any element from forcing horizontal scroll */
+  .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Text wrap on mobile buttons */
+  .btn {
+    white-space: normal !important;
+    text-align: center;
   }
 }
 

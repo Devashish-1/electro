@@ -74,7 +74,7 @@ export const ApfcCalculator: React.FC = () => {
         </span>
       </div>
 
-      <div style={{ padding: '24px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '28px' }}>
+      <div className="calculator-grid" style={{ padding: '20px 16px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px' }}>
         {/* Left Inputs */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
           {/* Motor Load */}

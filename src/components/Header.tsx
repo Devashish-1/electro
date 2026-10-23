@@ -213,14 +213,14 @@ export const Header: React.FC = () => {
               <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--color-primary-900)', letterSpacing: '-0.5px', lineHeight: 1.1 }}>
                 DAGDI <span style={{ color: 'var(--color-accent-blue)', fontWeight: 700 }}>ELECTRICALS</span>
               </div>
-              <div style={{ fontSize: '11px', color: 'var(--color-text-muted)', fontWeight: 600, letterSpacing: '0.3px' }}>
+              <div className="desktop-only" style={{ fontSize: '11px', color: 'var(--color-text-muted)', fontWeight: 600, letterSpacing: '0.3px' }}>
                 DAGDI ELECTRIC MOTOR REWINDING WORKS • BEAWAR
               </div>
             </div>
           </div>
 
-          {/* Search Bar with live autocomplete & filters */}
-          <div ref={searchRef} style={{ flex: 1, maxWidth: '580px', position: 'relative' }}>
+          {/* Search Bar with live autocomplete & filters (Desktop) */}
+          <div className="desktop-only" ref={searchRef} style={{ flex: 1, maxWidth: '580px', position: 'relative' }}>
             <form onSubmit={handleSearchSubmit} style={{ display: 'flex', position: 'relative' }}>
               <input
                 type="text"
@@ -387,9 +387,10 @@ export const Header: React.FC = () => {
           {/* Action CTAs: AI Assistant, Compare, Wishlist, Cart Drawer, RFQ */}
           <div className="flex items-center gap-3">
             {/* AI Advisor Button */}
+            {/* AI Advisor Button (Desktop only) */}
             <button
               onClick={() => setAiAssistantOpen(true)}
-              className="btn btn-outline btn-sm flex items-center gap-1"
+              className="desktop-only btn btn-outline btn-sm flex items-center gap-1"
               style={{
                 borderColor: '#38bdf8',
                 backgroundColor: '#f0f9ff',
@@ -402,9 +403,10 @@ export const Header: React.FC = () => {
               <span style={{ fontWeight: 700 }}>AI Advisor</span>
             </button>
 
-            {/* Compare items button */}
+            {/* Compare items button (Desktop only) */}
             <button
               onClick={() => setCompareModalOpen(true)}
+              className="desktop-only"
               style={{
                 position: 'relative',
                 padding: '8px',
@@ -478,7 +480,7 @@ export const Header: React.FC = () => {
             <button
               onClick={() => setCartDrawerOpen(true)}
               className="btn btn-navy flex items-center gap-2"
-              style={{ padding: '9px 16px' }}
+              style={{ padding: '8px 12px' }}
               title="Open Shopping Cart"
             >
               <div style={{ position: 'relative' }}>
@@ -506,13 +508,13 @@ export const Header: React.FC = () => {
                   </span>
                 )}
               </div>
-              <span style={{ fontWeight: 700 }}>Cart</span>
+              <span className="desktop-only" style={{ fontWeight: 700 }}>Cart</span>
             </button>
 
-            {/* B2B RFQ Button */}
+            {/* B2B RFQ Button (Desktop only) */}
             <button
               onClick={() => setRfqModalOpen(true)}
-              className="btn btn-amber flex items-center gap-1"
+              className="desktop-only btn btn-amber flex items-center gap-1"
               style={{ padding: '9px 16px' }}
               title="Request a B2B Bulk Quotation"
             >
@@ -520,6 +522,46 @@ export const Header: React.FC = () => {
               <span>Request Quote</span>
             </button>
           </div>
+        </div>
+
+        {/* Dedicated Mobile Search Bar */}
+        <div className="mobile-only" style={{ marginTop: '10px', width: '100%' }}>
+          <form onSubmit={handleSearchSubmit} style={{ display: 'flex', position: 'relative', width: '100%' }}>
+            <input
+              type="text"
+              placeholder="Search panels, welding, wires, motors..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              style={{
+                width: '100%',
+                padding: '9px 42px 9px 12px',
+                borderRadius: '8px',
+                border: '1px solid var(--color-surface-border-strong)',
+                backgroundColor: '#f8fafc',
+                fontSize: '13px',
+                outline: 'none'
+              }}
+            />
+            <button
+              type="submit"
+              style={{
+                position: 'absolute',
+                right: '4px',
+                top: '4px',
+                bottom: '4px',
+                width: '34px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: 'var(--color-accent-blue)',
+                color: '#ffffff',
+                borderRadius: '6px'
+              }}
+              aria-label="Submit search"
+            >
+              <Search size={16} />
+            </button>
+          </form>
         </div>
       </div>
 

@@ -150,29 +150,29 @@ export const HomePage: React.FC = () => {
               <div
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(3, 1fr)',
-                  gap: '16px',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(95px, 1fr))',
+                  gap: '12px',
                   paddingTop: '20px',
                   borderTop: '1px solid rgba(255, 255, 255, 0.12)'
                 }}
               >
                 <div>
-                  <div style={{ fontSize: '26px', fontWeight: 900, color: '#38bdf8' }}>5,000+</div>
-                  <div style={{ fontSize: '12px', color: '#94a3b8' }}>Motors Rewound & Serviced</div>
+                  <div style={{ fontSize: '24px', fontWeight: 900, color: '#38bdf8' }}>5,000+</div>
+                  <div style={{ fontSize: '11px', color: '#94a3b8' }}>Motors Rewound</div>
                 </div>
                 <div>
-                  <div style={{ fontSize: '26px', fontWeight: 900, color: '#fbbf24' }}>100%</div>
-                  <div style={{ fontSize: '12px', color: '#94a3b8' }}>Pure Electrolytic Copper</div>
+                  <div style={{ fontSize: '24px', fontWeight: 900, color: '#fbbf24' }}>100%</div>
+                  <div style={{ fontSize: '11px', color: '#94a3b8' }}>Pure Copper</div>
                 </div>
                 <div>
-                  <div style={{ fontSize: '26px', fontWeight: 900, color: '#34d399' }}>08ADOPD...</div>
-                  <div style={{ fontSize: '12px', color: '#94a3b8' }}>GST Verified Invoicing</div>
+                  <div style={{ fontSize: '24px', fontWeight: 900, color: '#34d399' }}>08ADOPD...</div>
+                  <div style={{ fontSize: '11px', color: '#94a3b8' }}>GST Verified</div>
                 </div>
               </div>
             </div>
 
             {/* Right Showcase Image Card */}
-            <div style={{ position: 'relative' }}>
+            <div style={{ position: 'relative', width: '100%', maxWidth: '100%' }}>
               <div
                 style={{
                   borderRadius: 'var(--radius-xl)',
@@ -193,25 +193,27 @@ export const HomePage: React.FC = () => {
               <div
                 style={{
                   position: 'absolute',
-                  bottom: '-20px',
-                  left: '20px',
+                  bottom: '-16px',
+                  left: '12px',
+                  maxWidth: 'calc(100% - 24px)',
                   backgroundColor: '#ffffff',
                   color: 'var(--color-primary-900)',
-                  padding: '12px 18px',
+                  padding: '10px 14px',
                   borderRadius: 'var(--radius-md)',
                   boxShadow: 'var(--shadow-xl)',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '12px',
-                  border: '1px solid #e2e8f0'
+                  gap: '10px',
+                  border: '1px solid #e2e8f0',
+                  boxSizing: 'border-box'
                 }}
               >
-                <div style={{ width: '36px', height: '36px', borderRadius: '50%', background: '#ecfdf5', color: '#10b981', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <ShieldCheck size={22} />
+                <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: '#ecfdf5', color: '#10b981', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <ShieldCheck size={20} />
                 </div>
-                <div>
-                  <div style={{ fontSize: '13px', fontWeight: 800 }}>Beawar Central Godown</div>
-                  <div style={{ fontSize: '11px', color: 'var(--color-text-muted)' }}>Same-Day Dispatch Across Rajasthan</div>
+                <div style={{ overflow: 'hidden' }}>
+                  <div style={{ fontSize: '12px', fontWeight: 800, whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>Beawar Central Godown</div>
+                  <div style={{ fontSize: '10px', color: 'var(--color-text-muted)', whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>Same-Day Dispatch in Rajasthan</div>
                 </div>
               </div>
             </div>

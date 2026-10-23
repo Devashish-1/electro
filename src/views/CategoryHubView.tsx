@@ -186,10 +186,10 @@ export const CategoryHubView: React.FC<CategoryHubViewProps> = ({ category, init
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-              gap: '14px',
-              marginTop: '36px',
-              paddingTop: '24px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+              gap: '12px',
+              marginTop: '30px',
+              paddingTop: '20px',
               borderTop: '1px solid rgba(255, 255, 255, 0.12)',
             }}
           >

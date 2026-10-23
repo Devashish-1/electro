@@ -15,8 +15,8 @@ export const Footer: React.FC = () => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-            gap: '24px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+            gap: '20px',
             paddingBottom: '36px',
             borderBottom: '1px solid rgba(255,255,255,0.1)'
           }}
@@ -66,8 +66,8 @@ export const Footer: React.FC = () => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-            gap: '36px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+            gap: '30px',
             paddingTop: '36px',
             paddingBottom: '36px'
           }}
