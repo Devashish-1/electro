@@ -9,6 +9,13 @@ const nextConfig = {
       },
     ],
   },
+  outputFileTracingExcludes: {
+    '*': [
+      './AGENTS.md',
+      'AGENTS.md',
+      'node_modules/next/dist/docs/**',
+    ],
+  },
 };
 
 export default nextConfig;
